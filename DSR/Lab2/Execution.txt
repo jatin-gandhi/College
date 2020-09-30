@@ -1,0 +1,36 @@
+// 1a. Importing a csv , summarizing it and plotting two columns of csv.
+
+setwd("E:/")
+getwd()
+grep(".csv",list.files(),value=T)
+dataset<-read.csv("Churn_Modelling.csv")
+dataset
+dataset<-na.exclude(dataset)
+dataset
+head(dataset)
+summary(dataset)
+dim(dataset)
+ncol(dataset)
+nrow(dataset)
+str(dataset)
+colnames(dataset)
+Age<-dataset[,"Age"]
+CreditScore<-dataset[,"CreditScore"]
+plot(Age,CreditScore)
+
+// 1b. Importing csv using read.delim() and add column to the csv.
+
+getwd()
+dataset<-read.delim("bank-data.csv",sep=',')
+dataset
+head(dataset)
+summary(dataset)
+colnames((dataset))
+ncol(dataset)
+nrow(dataset)
+str(dataset)
+numbers<-seq(1,600)
+numbers
+new_dataset<-cbind(dataset,numbers)
+new_dataset
+colnames(new_dataset)

@@ -1,0 +1,30 @@
+// 1
+
+getwd()
+setwd('E:/')
+dataset<-read.delim("bank-data.csv",sep=',')
+head(dataset)
+summary(dataset)
+colnames((dataset))
+nrow(dataset)
+numbers<-seq(600,1)
+numbers
+new_dataset<-cbind(dataset,numbers)
+head(new_dataset)
+colnames(new_dataset)
+write.csv(new_dataset,'exportData1.csv',row.names = FALSE)
+
+// 2
+
+buffTail<-c(10,1,37,5,12)
+gardenBee<-c(8,3,9,6,4)
+redTail<-c(18,9,1,2,4)
+carderBee<-c(8,27,6,32,23)
+honeyBee<-c(12,13,16,9,10)
+dataframe<-data.frame(buffTail,gardenBee,redTail,carderBee,honeyBee)
+dataframe
+rownames(dataframe)<-c('Thistle','Vipers','Golden','Rain','Yell')
+dataframe
+row.names(dataframe)
+dataframe
+

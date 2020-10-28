@@ -1,0 +1,31 @@
+// 1.
+
+empid<-c(1,2,3,4,5,6,7,8,9,10)
+salary<-c(40000,42000,45000,37000,56000,60000,80000,25000,30000,36000)
+martialStatus<-c("M","B","B","B","M","M","M","B","B","M")
+df<-data.frame(empid,salary,martialStatus)
+df
+empid<-c(101,102,103,104,105,106,107,108,109,110)
+salary<-c(10000,13000,50899,28900,23000,26789,90987,76433,50000,29000)
+maritalStatus<-c('married','bachelor','bachelor','married','bachelor','married','married','bachelor','bachelor','married')
+dataframe<-data.frame(salary,maritalStatus)
+dataframe
+boxplot(salary~maritalStatus,data=dataframe)
+
+
+// 2. 
+
+install.packages("ggplot2")
+library(ggplot2)
+set.seed(100)
+x<-rnorm(100,mean=0,sd=1)
+x
+boxplot(x)
+
+x<-rnorm(100,mean=1,sd=2)
+x
+y<-rnorm(100,mean=2.5,sd=10.5)
+y
+dat<-as.data.frame(cbind(x,y))
+View(dat)
+ggplot()+geom_point(data=dat, aes(x=x,y=y),size=3, color="blue")+ggtitle("Scatter Plot")+labs(y= "y axis ", x = "x axis")
